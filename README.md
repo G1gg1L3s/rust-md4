@@ -1,13 +1,16 @@
 # RustCrypto: MD4
 
-[![crate][crate-image]][crate-link]
-[![Docs][docs-image]][docs-link]
-![Apache2/MIT licensed][license-image]
-![Rust Version][rustc-image]
-[![Project Chat][chat-image]][chat-link]
-[![Build Status][build-image]][build-link]
+## Disclaimer
+
+This is fork of md4 from https://github.com/RustCrypto/hashes.
+
+I added only a constructor to create MD4 object with a custom state to solve [Break an MD4 keyed MAC using length extension](https://cryptopals.com/sets/4/challenges/30).
+
+---
 
 Pure Rust implementation of the [MD4 hash function][1].
+
+
 
 [Documentation][docs-link]
 

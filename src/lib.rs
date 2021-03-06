@@ -144,6 +144,14 @@ impl Default for Md4State {
 }
 
 impl Md4 {
+    pub fn from_state(state: [u32; 4], len: u64) -> Self {
+        Self {
+            state: Md4State { s: state },
+            length_bytes: len,
+            buffer: Default::default(),
+        }
+    }
+
     fn finalize_inner(&mut self) {
         let state = &mut self.state;
         let l = (self.length_bytes << 3) as u64;
